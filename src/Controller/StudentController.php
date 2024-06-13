@@ -13,6 +13,8 @@ class StudentController extends AbstractController
      */
     public function index(): Response
     {
+
+        
         return $this->render('student/index.html.twig', [
             'controller_name' => 'StudentController',
         ]);
