@@ -1,0 +1,37 @@
+{# templates/annonces/new.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Create New Annonce{% endblock %}
+
+{% block body %}
+    <h1>Create New Annonce</h1>
+
+    {{ form_start(form) }}
+    <div>
+        {{ form_label(form.title) }}
+        {{ form_widget(form.title, { 'attr': {'class': 'form-control'} }) }}
+        {{ form_errors(form.title) }}
+    </div>
+
+    <div>
+        {{ form_label(form.content) }}
+        {{ form_widget(form.content, { 'attr': {'class': 'form-control'} }) }}
+        {{ form_errors(form.content) }}
+    </div>
+
+    <div>
+        {{ form_label(form.courseFile) }}
+        {{ form_widget(form.courseFile, { 'attr': {'class': 'form-control-file'} }) }}
+        {{ form_errors(form.courseFile) }}
+    </div>
+
+    <div>
+        {{ form_label(form.categorie) }}
+        {{ form_widget(form.categorie, { 'attr': {'class': 'form-control'} }) }}
+        {{ form_errors(form.categorie) }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    {{ form_end(form) }}
+{% endblock %}
